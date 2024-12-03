@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    color: lightgray;
 
 }
 
@@ -20,7 +21,7 @@
     width: 250px;
     height: 100%;
     background-color: #000000;
-    color: #636363;
+    
 }
 
 .nav-list {
@@ -46,7 +47,7 @@
 
 /* sezione scelte menu */
 nav a {
-    color: #636363;
+    color: lightgray;
     font-weight: bold;
     text-decoration: none;
 }
@@ -151,24 +152,92 @@ nav a {
 
 /* parte canzone sinitra*/
 .song {
+    display: flex;
+    align-items: center;
     width: 20%;
     /* DEBUG */
-    height: 100%;
-    background-color: red;
+    /* height: 100%;
+    background-color: red; */
+}
+
+.song h4 {
+    color: white;
+    font-size: 17px;
+}
+
+.song img {
+    width: 15%;
+    margin: 0 10px;
+}
+
+.song i {
+    margin-left: 20px;
+}
+
+.title-song {
+    margin-right: 30px;
+    font-size: 13px;
 }
 
 /* parte del player centrale */
 .player {
     width: 50%;
     /* DEBUG */
-    height: 100%;
-    background-color: blueviolet;
+    /* height: 100%;
+    background-color: blueviolet; */
+}
+
+.skip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.skip i {
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+/* parte skip/play */
+.skip .fa-circle-play {
+    font-size: 30px;
+}
+
+/* parte time line */
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-line {
+    width: 50%;
+    height: 5px;
+    background-color: gray;
+    margin: 0 10px;
+    border-radius: 5px;
 }
 
 /* parte volume destra */
 .volume {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 20%;
     /* DEBUG */
-    height: 100%;
-    background-color: blue;
+    /* height: 100%;
+    background-color: blue; */
+}
+
+.volume i {
+    margin: 0 10px;
+}
+
+.volume-line {
+    width: 25%;
+    height: 5px;
+    background-color: gray;
+    margin: 0 10px;
+    border-radius: 5px;
 }
