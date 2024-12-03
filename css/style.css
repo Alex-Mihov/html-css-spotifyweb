@@ -47,6 +47,7 @@
 /* sezione scelte menu */
 nav a {
     color: #636363;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -142,6 +143,32 @@ nav a {
 
 /************************** parte player/controller ***********************/
 #player {
+    display: flex;
+    justify-content: space-between;
     height: 100px;
     background-color: #282828;
+}
+
+/* parte canzone sinitra*/
+.song {
+    width: 20%;
+    /* DEBUG */
+    height: 100%;
+    background-color: red;
+}
+
+/* parte del player centrale */
+.player {
+    width: 50%;
+    /* DEBUG */
+    height: 100%;
+    background-color: blueviolet;
+}
+
+/* parte volume destra */
+.volume {
+    width: 20%;
+    /* DEBUG */
+    height: 100%;
+    background-color: blue;
 }
