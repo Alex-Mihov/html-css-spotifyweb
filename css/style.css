@@ -3,8 +3,9 @@
     border: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
     color: lightgray;
+    font-family: "Montserrat", sans-serif;
+    
 
 }
 
@@ -67,7 +68,7 @@ nav a {
 }
 
 .menu a {
-    font-size: 20px;
+    font-size: 16px;
     padding-top: 10px;
 }
 
@@ -137,9 +138,104 @@ nav a {
 
 /*************************** blocco di contenuto principale******************* */
 #wrapper main {
+    overflow: auto;
     height: 100%;
     width: calc(100% - 250px);
     background-color: #141922;
+}
+
+/* parte upgrade fissa */
+#wrapper .upgrade {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 250px);
+    height: 100px;
+    background-color: black;
+    z-index: 999;
+    opacity: 0.5;
+}
+
+.upgrade button {
+   color: #fff;
+   background-color: transparent;
+   border: 3px solid white;
+   border-radius: 25px;
+   margin-right: 5px;
+   font-weight: bold;
+   padding: 15px 30px;
+}
+
+/* parte tipologia contenuti */
+.content-type{
+    text-align: center;
+    margin-top: 120px;
+}
+
+.content-type a {
+    padding: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* parte recent playlist */
+.playlists-type {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.playlists-type h2 {
+    color: white;
+    margin-left: 20px;
+    width: 100%;
+    font-size: 40px;
+}
+
+.playlists-type h3 {
+    margin-top: 20px;
+    color: white;
+}
+
+.playlists-type .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 15%;
+}
+
+.col img {
+    width: 100%;
+}
+
+.col span{
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+/*  parter per te */
+
+.for-you span {
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* sezione artisti */
+.artists span {
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.artists img {
+    border-radius: 50%;
 }
 
 /************************** parte player/controller ***********************/
