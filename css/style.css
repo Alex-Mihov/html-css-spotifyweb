@@ -3,34 +3,81 @@
     border: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
 }
 
-/* macro blocco principale */
+/*************************** macro blocco principale ********************************/
 #wrapper {
     display: flex;
     height: calc(100vh - 100px);
     /* DEBUG */
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
-/* blocco navigazione sinitra */
+/************************** blocco navigazione sinitra *************************/
 #wrapper nav {
     width: 250px;
     height: 100%;
-    /* DEBUG */
-    background-color: red;
-    height: calc();
+    background-color: #000000;
+    color: #636363;
 }
 
-/* blocco di contenuto principale */
+/* parte logo */
+#logo {
+    height: fit-content;
+}
+
+#logo img {
+    
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 60%;
+}
+
+#logo .small-logo {
+    display: none;
+    width: 25%;
+}
+
+/* sezione scelte menu */
+nav a {
+    color: #636363;
+    text-decoration: none;
+}
+
+.menu {
+    margin-top: 30px;
+    /* DEBUG */
+    height: 150px;
+    background-color: red;
+}
+
+.menu-list img {
+    width: 15%;
+}
+
+/* sezione playlist pesonali */
+.personal-playlist {
+     /* DEBUG */
+     height: 400px;
+     background-color: green;
+}
+
+.profile {
+    /* DEBUG */
+    height: 100px;
+    background-color: violet;
+}
+
+/*************************** blocco di contenuto principale******************* */
 #wrapper main {
     height: 100%;
     width: calc(100% - 250px);
-    /* DEBUG */
-    background-color: green;
+    background-color: #141922;
 }
 
-/* parte player/controller */
+/************************** parte player/controller ***********************/
 #player {
     height: 100px;
     background-color: #282828;
