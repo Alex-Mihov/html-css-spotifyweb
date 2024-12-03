@@ -23,6 +23,10 @@
     color: #636363;
 }
 
+.nav-list {
+    list-style: none;
+}
+
 /* parte logo */
 #logo {
     height: fit-content;
@@ -47,27 +51,86 @@ nav a {
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
+    padding-left: 20px;
     /* DEBUG */
-    height: 150px;
-    background-color: red;
+    /* height: 150px;
+    background-color: red; */
 }
 
-.menu-list img {
+.menu img {
     width: 15%;
+}
+
+.menu a {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.menu i {
+    font-size: 25px;
 }
 
 /* sezione playlist pesonali */
 .personal-playlist {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
      /* DEBUG */
-     height: 400px;
-     background-color: green;
+     /* height: 400px;
+     background-color: green; */
+}
+
+.personal-playlist h3 {
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* creazione nuova playlist */
+.new-playlist i {
+    padding: 10px;
+    font-size: 20px;
+    color: #000000;
+    background-color: #636363;
+}
+
+.personal-playlist a {
+    margin-top: 20px;
+}
+
+/* sezione download e profilo */
+.profile-download {
+    margin: 0 20px;
+    /* DEBUG */
+    /* height: 100px;
+    background-color: violet; */
+    
+}
+
+.download {
+    padding: 5px 0;
+    border-bottom: 1px solid #636363;
+}
+
+.download i {
+    font-size: 15px;
 }
 
 .profile {
-    /* DEBUG */
-    height: 100px;
-    background-color: violet;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.profile i {
+    font-size: 30px;
+    background-color: gray;
+    padding: 5px;
+    border-radius: 50%;
 }
 
 /*************************** blocco di contenuto principale******************* */
