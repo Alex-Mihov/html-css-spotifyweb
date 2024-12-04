@@ -3,12 +3,11 @@
     border: 0;
     margin: 0;
     box-sizing: border-box;
-    color: lightgray;
-    font-family: "Montserrat", sans-serif;
-    
-
 }
 
+body {
+    font-family: "Montserrat", sans-serif;
+}
 /*************************** macro blocco principale ********************************/
 #wrapper {
     display: flex;
@@ -19,8 +18,13 @@
 
 /************************** blocco navigazione sinitra *************************/
 #wrapper nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 250px;
     height: 100%;
+    overflow: hidden;
+    color: gray;
     background-color: #000000;
     
 }
@@ -29,15 +33,36 @@
     list-style: none;
 }
 
+/*********** parte hover nav *******/
+nav a:hover {
+    color: #fff;
+}
+
+.menu li:active {
+    border-left: 2px solid green;
+}
+
+.new-playlist:hover {
+    color: #fff;
+}
+
+.new-playlist i:hover {
+    background-color: white;
+}
+
+.download span:hover {
+    color: #fff;
+}
+
+
+/* parte del menu */
 /* parte logo */
 #logo {
     height: fit-content;
 }
 
 #logo img {
-    
-    padding-top: 20px;
-    padding-left: 20px;
+    padding: 20px 0 20px 20px;
     width: 60%;
 }
 
@@ -48,39 +73,45 @@
 
 /* sezione scelte menu */
 nav a {
-    color: lightgray;
+    color: gray;
     font-weight: bold;
     text-decoration: none;
 }
 
 .menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    padding-left: 20px;
     /* DEBUG */
-    /* height: 150px;
-    background-color: red; */
+    /* height: 100px; */
+    /* background-color: red; */
 }
 
-.menu img {
-    width: 15%;
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu li {
+    padding-left: 20px;
+    margin-top: 10px;
 }
 
 .menu a {
-    font-size: 16px;
-    padding-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.menu i {
-    font-size: 25px;
+.menu a img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.menu span {
+    font-size: 20px;
 }
 
 /* sezione playlist pesonali */
 .personal-playlist {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
      /* DEBUG */
      /* height: 400px;
      background-color: green; */
@@ -88,20 +119,26 @@ nav a {
 
 .personal-playlist h3 {
     color: white;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin: 30px 0 10px 20px;
+}
+
+.personal-playlist li {
+    margin-top: 15px;
+    padding-left: 20px;
 }
 
 /* creazione nuova playlist */
 .new-playlist i {
+    margin-left: 20px;
+    margin-right: 10px;
     padding: 10px;
     font-size: 20px;
     color: #000000;
     background-color: #636363;
 }
 
-.personal-playlist a {
-    margin-top: 20px;
+.new-playlist span {
+    font-weight: bold;
 }
 
 /* sezione download e profilo */
@@ -114,26 +151,37 @@ nav a {
 }
 
 .download {
+    display: flex;
+    align-items: center;
     padding: 5px 0;
     border-bottom: 1px solid #636363;
 }
 
-.download i {
-    font-size: 15px;
+.download img {
+    width: 20px;
+    margin-right: 10px;
 }
 
 .profile {
+    display: flex;
+    align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
     font-weight: bold;
 }
 
-.profile i {
+.profile img {
+    width: 35px;
     font-size: 30px;
     background-color: gray;
     padding: 5px;
     border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile span {
+    color: white;
 }
 
 /*************************** blocco di contenuto principale******************* */
@@ -141,7 +189,14 @@ nav a {
     overflow: auto;
     height: 100%;
     width: calc(100% - 250px);
+    color: gray;
     background-color: #141922;
+}
+
+/********* hover main *********/
+/* hover button upgrade */
+.upgrade button:hover {
+    font-size: 16px;
 }
 
 /* parte upgrade fissa */
@@ -162,7 +217,7 @@ nav a {
    background-color: transparent;
    border: 3px solid white;
    border-radius: 25px;
-   margin-right: 5px;
+   margin-right: 20px;
    font-weight: bold;
    padding: 15px 30px;
 }
@@ -177,6 +232,7 @@ nav a {
     padding: 0 10px;
     text-decoration: none;
     font-weight: bold;
+    color: gray;
 }
 
 /* parte recent playlist */
@@ -243,7 +299,26 @@ nav a {
     display: flex;
     justify-content: space-between;
     height: 100px;
+    color: gray;
     background-color: #282828;
+}
+
+/*********** hover player ***********/
+/* hover time line e volume */
+.short-line:hover {
+    background-color: greenyellow;
+}
+
+.fa-circle-play:hover {
+    color: #fff;
+}
+
+.title-song span:hover {
+    border-bottom: 1px solid;
+}
+
+.song i:hover {
+    color: #fff;
 }
 
 /* parte canzone sinitra*/
@@ -307,12 +382,24 @@ nav a {
     align-items: center;
 }
 
+.time span {
+    margin: 0 10px
+}
+
 .time-line {
-    width: 50%;
+    width: 35%;
     height: 5px;
     background-color: gray;
-    margin: 0 10px;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.short-line {
+    width: 10%;
+    height: 5px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 /* parte volume destra */
@@ -331,9 +418,10 @@ nav a {
 }
 
 .volume-line {
-    width: 25%;
+    width: 20%;
     height: 5px;
     background-color: gray;
-    margin: 0 10px;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-right: 10px;
 }

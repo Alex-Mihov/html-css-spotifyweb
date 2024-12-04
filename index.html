@@ -19,73 +19,110 @@
         <!-- navigazione parte sinistra -->
         <nav>
 
-            <!-- sezione logo -->
-             <div id="logo">
-                <img src="./img/logo.svg" alt="logo spotify">
-                <img class="small-logo" src="./img/logo-small.svg" alt="logo spotify piccolo">
-             </div>
+             <!-- scelte menu e playlist -->
+             <div class="upper-nav">
 
-            <!-- varie scelte menu -->
-            <div class="menu">
+                  
 
-                <a href="#">
-                    <i class="fa-solid fa-house"></i>
-                    Home
-                </a>
-            
-                <a href="#">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    Cerca
-                </a>
-            
-                <a href="#">
-                    <i class="fa-solid fa-lines-leaning"></i>
-                    La tua libreria 
-                </a>
-                    
-            </div>
+                <!-- varie scelte menu e logo -->
+                <div class="menu">
 
-            <!-- sezione playlist -->
-            <div class="personal-playlist">
+                    <!-- sezione logo -->
+                    <div id="logo">
+                        <img src="./img/logo.svg" alt="logo spotify">
+                        <img class="small-logo" src="./img/logo-small.svg" alt="logo spotify piccolo">
+                    </div>
 
-                <h3>PLAYLIST</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./img/home.svg" alt="home">
+                                <span>Home</span>
+                            </a>
+                            
+                        </li>
 
-                <!-- creazione nuova playlist -->
-                <div class="new-playlist">
-                    <i class="fa-solid fa-plus"></i>
-                    Crea Playlist
+                        <li>
+                            <a href="#">
+                                <img src="./img/search.svg" alt="cerca">
+                                <span>Cerca</span>
+                            </a>
+                            
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="./img/libreria.svg" alt="la tua 
+                                libreria">
+                                <span>La tua libreria</span>
+                            </a>
+                            
+                        </li>
+                    </ul>
+                        
                 </div>
 
-                <!-- lista playlist personali -->
-                <a href="#">Nome Playlist</a>
+                <!-- sezione playlist -->
+                <div class="personal-playlist">
+
+                    <h3>PLAYLIST</h3>
+
+                    <!-- creazione nuova playlist -->
+                    <div class="new-playlist">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Crea Playlist</span> 
+                    </div>
+
+                    <!-- lista playlist personali -->
+
+                    <ul>
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                    </ul>
+                        
+                </div>
+
+              </div>
             
-                <a href="#">Nome Playlist</a>
-            
-                <a href="#">Nome Playlist</a>
-            
-                <a href="#">Nome Playlist</a>
-            
-                <a href="#">Nome Playlist</a>
-            
-                <a href="#">Nome Playlist</a>
-            
-                <a href="#">Nome Playlist</a>
-                    
-            </div>
 
             <!-- sezione download e profilo -->
              <div class="profile-download">
 
                 <!-- parte download -->
                 <div class="download">
-                    <i class="fa-regular fa-circle-down"></i>
-                    Installa app
+                    <img src="./img/download.svg" alt="download">
+                    <span>Installa app</span>
                 </div>
 
                 <!-- parte profilo -->
                 <div class="profile">
-                    <i class="fa-regular fa-user"></i>
-                    John Doe
+                    <img src="./img/profile.svg" alt="profilo">
+                    <span>John Doe</span>
                 </div>
 
              </div>
@@ -208,7 +245,7 @@
 
             <div class="title-song">
                 <h4>Sinister</h4>
-                Brano Nome
+                <span>Brano Nome</span>
             </div>
 
             <i class="fa-regular fa-heart"></i>
@@ -235,6 +272,7 @@
             <div class="time">
 
                 <span>0:25</span>
+                <div class="short-line"></div>
                 <div class="time-line"></div>
                 <span>4:35</span>
 
@@ -248,6 +286,7 @@
             <i class="fa-solid fa-list"></i>
             <i class="fa-solid fa-display"></i>
             <i class="fa-solid fa-volume-high"></i>
+            <div class="short-line"></div>
             <div class="volume-line"></div>
             
         </div>
