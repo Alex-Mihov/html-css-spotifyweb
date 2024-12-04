@@ -228,15 +228,26 @@ ul {
 }
 
 .content-type a {
-    padding: 0 10px;
     text-decoration: none;
+    margin-right: 20px;
     font-weight: bold;
     color: gray;
+}
+
+/* hover e active content type */
+.content-type a:hover {
+    color: #fff;
+}
+
+.content-type a:active {
+    border-bottom: 2px solid green;
 }
 
 /* parte recent playlist */
 .album-type {
     display: flex;
+    gap: 10px;
+    margin: 0 20px;
 }
 
 .playlists-type {
@@ -249,7 +260,7 @@ ul {
     color: white;
     margin-left: 20px;
     width: 100%;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .playlists-type h3 {
@@ -260,8 +271,7 @@ ul {
 .playlists-type .col {
     text-align: center;
     margin-top: 30px;
-    margin-left: 20px;
-    width: 35%;
+    width: 25%;
 }
 
 .col img {
@@ -289,13 +299,15 @@ ul {
     z-index: 20;
 }
 
+
+/* hover vari album */
 .player-img :hover {
     opacity: 0.5;
 }
 
-.player-img i:hover {
+.player-img:hover i {
     display: block;
-    z-index: 20;
+    opacity: 1;
 }
 
 /*  parter per te */
@@ -350,7 +362,7 @@ ul {
 .song {
     display: flex;
     align-items: center;
-    width: 20%;
+    width: 25%;
     /* DEBUG */
     /* height: 100%;
     background-color: red; */
@@ -375,6 +387,10 @@ ul {
     font-size: 13px;
 }
 
+.liked i {
+    display: block;
+    margin: 5px;
+}
 /* parte del player centrale */
 .player {
     width: 50%;
@@ -432,7 +448,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 20%;
+    width: 25%;
     /* DEBUG */
     /* height: 100%;
     background-color: blue; */
@@ -454,7 +470,7 @@ ul {
 /**************************** media query *************************************/
 
 /* medium device */
-@media screen and (max-width:1199px) {
+@media screen and (max-width:878px) {
 
     .album-type {
         flex-wrap: wrap;
@@ -465,13 +481,13 @@ ul {
     }
     
     .for-you .col {
-        width: 30%;
+        width: 20%;
     }
 
 }
 
 /* small device */
-@media screen and (max-width:768px) {
+@media screen and (max-width:639px) {
     
     .album-type {
         flex-wrap: wrap;
@@ -485,7 +501,7 @@ ul {
 
 /* extra small device */
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:552px) {
     
     /* sezione nav sinistra  */
     #wrapper nav {
@@ -544,5 +560,14 @@ ul {
 
     #wrapper main {
         width: calc(100% - 50px); 
+    }
+
+    /* sezione footer canzone */
+    .title-song{
+        margin-right: 0;
+    }
+
+    .song i {
+        margin-left: 0;
     }
 }
