@@ -193,7 +193,6 @@ ul {
     background-color: #141922;
 }
 
-/********* hover main *********/
 /* hover button upgrade */
 .upgrade button:hover {
     font-size: 16px;
@@ -236,6 +235,10 @@ ul {
 }
 
 /* parte recent playlist */
+.album-type {
+    display: flex;
+}
+
 .playlists-type {
     display: flex;
     flex-wrap: wrap;
@@ -255,13 +258,10 @@ ul {
 }
 
 .playlists-type .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    text-align: center;
     margin-top: 30px;
     margin-left: 20px;
-    width: 15%;
+    width: 35%;
 }
 
 .col img {
@@ -271,6 +271,31 @@ ul {
 .col span{
     margin-top: 5px;
     font-size: 15px;
+}
+
+.player-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.player-img i {
+    position: absolute;
+    font-size: 60px;
+    color: #fff;
+    display: none;
+    z-index: 20;
+}
+
+.player-img :hover {
+    opacity: 0.5;
+}
+
+.player-img i:hover {
+    display: block;
+    z-index: 20;
 }
 
 /*  parter per te */
@@ -337,7 +362,7 @@ ul {
 }
 
 .song img {
-    width: 15%;
+    width: 20%;
     margin: 0 10px;
 }
 
@@ -424,4 +449,100 @@ ul {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     margin-right: 10px;
+}
+
+/**************************** media query *************************************/
+
+/* medium device */
+@media screen and (max-width:1199px) {
+
+    .album-type {
+        flex-wrap: wrap;
+    }
+
+    .playlists-type .col {
+        width: 20%;
+    }
+    
+    .for-you .col {
+        width: 30%;
+    }
+
+}
+
+/* small device */
+@media screen and (max-width:768px) {
+    
+    .album-type {
+        flex-wrap: wrap;
+    }
+
+    .playlists-type .col {
+        width: 45%;
+    }
+
+}
+
+/* extra small device */
+
+@media screen and (max-width:480px) {
+    
+    /* sezione nav sinistra  */
+    #wrapper nav {
+        width: 50px;
+    }
+
+    #wrapper nav span {
+        display: none;
+    }
+
+    #logo img{
+        display: none;
+    }
+
+    #logo .small-logo {
+        display: block;
+        width: 100%;
+        padding: 5px
+    }
+
+    .menu li{
+        padding: 0;
+        margin-left: 10px;
+    }
+
+    .new-playlist i {
+        margin: 0 5px;
+    }
+
+    .personal-playlist {
+        display: none;
+    }
+
+    .profile-download {
+        margin: 0 5px;
+        
+    }
+
+    .download {
+        border: none;
+    }
+
+    .download img{
+        margin: 0 10px;
+    }
+
+    .profile img {
+        width: 40px;
+        height: 40px;
+    }
+    /* sezione main */
+
+    #wrapper .upgrade {
+        width: calc(100% - 50px);
+    }
+
+    #wrapper main {
+        width: calc(100% - 50px); 
+    }
 }
