@@ -42,6 +42,10 @@ nav a:hover {
     border-left: 2px solid green;
 }
 
+.menu img:hover {
+    
+}
+
 .new-playlist:hover {
     color: #fff;
 }
@@ -79,6 +83,8 @@ nav a {
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
     /* DEBUG */
     /* height: 100px; */
     /* background-color: red; */
@@ -113,13 +119,19 @@ ul {
     display: flex;
     flex-direction: column;
      /* DEBUG */
-     /* height: 400px;
+    /* height: 400px;
      background-color: green; */
 }
 
 .personal-playlist h3 {
     color: white;
     margin: 30px 0 10px 20px;
+}
+
+.personal-playlist ul {
+    list-style: none;
+    padding-left: 0;
+    overflow-y: auto;
 }
 
 .personal-playlist li {
@@ -212,13 +224,13 @@ ul {
 }
 
 .upgrade button {
-   color: #fff;
-   background-color: transparent;
-   border: 3px solid white;
-   border-radius: 25px;
-   margin-right: 20px;
-   font-weight: bold;
-   padding: 15px 30px;
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 25px;
+    margin-right: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
 }
 
 /* parte tipologia contenuti */
@@ -483,7 +495,18 @@ ul {
     .for-you .col {
         width: 20%;
     }
+    
+    .time-line {
+        min-width: 50px;
+    }
 
+    .short-line{
+        min-width: 30px;
+    }
+
+    .volume-line {
+        min-width: 30px;
+    }
 }
 
 /* small device */
@@ -495,6 +518,19 @@ ul {
 
     .playlists-type .col {
         width: 45%;
+    }
+
+    .time-line {
+        min-width: 50px;
+    }
+
+
+    .short-line{
+        min-width: 30px;
+    }
+
+    .volume-line {
+        min-width: 30px;
     }
 
 }
@@ -570,4 +606,9 @@ ul {
     .song i {
         margin-left: 0;
     }
+
+    .time-line {
+        min-width: 50px;
+    }
+
 }
